@@ -1,7 +1,7 @@
 package com.projeto.aluno_crud.service;
 
-
 import com.projeto.aluno_crud.model.Aluno;
+import com.projeto.aluno_crud.repository.AlunoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,11 +9,12 @@ import java.util.List;
 @Service
 public class AlunoService {
 
-        private final com.seuprojeto.alunos.AlunoRepository repository;
+    private final AlunoRepository repository;
 
-        public AlunoService(com.seuprojeto.alunos.AlunoRepository repository) {
-            this.repository = repository;
-        }
+    public AlunoService(AlunoRepository repository) {
+        this.repository = repository;
+    }
+
     public List<Aluno> listarTodos() {
         return repository.findAll();
     }

@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/alunos")
 public class AlunoController {
 
     private final AlunoService service;
@@ -45,4 +47,3 @@ public class AlunoController {
         service.deletar(id);
     }
 }
-
